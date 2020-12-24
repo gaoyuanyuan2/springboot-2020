@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CORS示例</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <script src="https://s3.pstatp.com/cdn/expire-1-M/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+<div id="message"></div>
+</body>
+<script>
+    $(document).ready(function () {
+        //Ajax跨域GET请求
+        $.get("http://paascloud-provider-uac:8080/hello", function (data) {
+            alert(data);
+            $("#message").html(data);
+        });
+    });
+</script>
+
+</html>
